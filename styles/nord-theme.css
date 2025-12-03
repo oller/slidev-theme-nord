@@ -1,0 +1,302 @@
+/* Nord Theme for Slidev - Comprehensive Styling */
+
+:root {
+  /* Nord Color Palette */
+  --dark0: #2e3440;
+  --dark1: #3b4252;
+  --dark2: #434c5e;
+  --dark3: #4c566a;
+
+  --light0: #d8dee9;
+  --light1: #e5e9f0;
+  --light2: #eceff4;
+  --light3: #ffffff;
+
+  --frost0: #8fbcbb;
+  --frost1: #88c0d0;
+  --frost2: #81a1c1;
+  --frost3: #5e81ac;
+
+  --red: #bf616a;
+  --orange: #d08770;
+  --yellow: #ebcb8b;
+  --green: #a3be8c;
+  --purple: #b48ead;
+
+  /* Slidev Variables */
+  /* --slidev-code-background: var(--dark1);
+--slidev-code-foreground: #1b1b1b;
+--slidev-code-font-family: "Fira Code", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+--slidev-code-padding: 8px;
+--slidev-code-font-size: 12px;
+--slidev-code-line-height: 18px;
+--slidev-code-radius: 4px;
+--slidev-code-margin: 4px 0;
+--slidev-theme-primary: #3ab9d5;
+--slidev-transition-duration: 0.5s;
+--slidev-slide-container-background: black;
+--slidev-controls-foreground: white;
+--slidev-code-tab-divider: #e5e5e5;
+--slidev-code-tab-text-color: #67676c;
+--slidev-code-tab-font-size: 12px;
+--slidev-code-tab-active-text-color: #3c3c43;
+*/
+} 
+
+/* Dark Mode */
+html.dark {
+  --slidev-bg: var(--dark0);
+  --slidev-bg-alt: var(--dark1);
+  --slidev-text: var(--light2);
+  --slidev-text-light: var(--light1);
+  --slidev-text-lighter: var(--light0);
+  --slidev-primary: var(--frost1);
+  --slidev-border: var(--dark2);
+  --slidev-code-background: var(--dark1);
+  --slidev-code-foreground: var(--light2);
+  --slidev-code-tab-divider: var(--dark2);
+  --slidev-code-tab-text-color: var(--light1);
+  --slidev-code-tab-active-text-color: var(--light2);
+}
+
+/* Light Mode */
+html.light {
+  --slidev-bg: var(--light0);
+  --slidev-bg-alt: var(--light2);
+  --slidev-text: var(--dark2);
+  --slidev-text-light: var(--dark1);
+  --slidev-text-lighter: var(--dark0);
+  --slidev-primary: var(--frost3);
+  --slidev-border: var(--light1);
+  --slidev-code-background: var(--light2);
+  --slidev-code-foreground: var(--dark2);
+  --slidev-code-tab-divider: var(--light1);
+  --slidev-code-tab-text-color: var(--dark1);
+  --slidev-code-tab-active-text-color: var(--dark2);
+}
+
+/* Body and Container */
+body,
+.slidev-container {
+  background-color: var(--slidev-bg);
+  color: var(--slidev-text);
+  font-family: 'Nunito Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+}
+
+h1 {
+  color: var(--red);
+}
+
+h2 {
+  color: var(--orange);
+}
+
+h3 {
+  color: var(--yellow);
+}
+
+h4 {
+  color: var(--green);
+}
+
+h5 {
+  color: var(--frost0);
+}
+
+h6 {
+  color: var(--frost2);
+}
+
+/* Code Styling */
+code,
+.slidev-code,
+.shiki {
+  font-family: 'Fira Code', 'Courier New', monospace;
+}
+
+code {
+  color: var(--frost1);
+  background-color: var(--dark1);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+.light code {
+  background-color: var(--light2);
+  color: var(--dark1);
+}
+
+pre {
+  background-color: var(--dark1);
+  color: var(--frost1);
+  border-radius: 4px;
+  overflow-x: auto;
+  overflow-y: auto;
+}
+
+.light pre {
+  background-color: var(--light2);
+  color: var(--dark2);
+  border: 1px solid var(--light1);
+}
+
+pre code {
+  background-color: transparent;
+  color: inherit;
+  padding: 0;
+}
+
+/* Links */
+a {
+  color: var(--frost3);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.light a {
+  color: var(--frost3);
+}
+
+a:hover {
+  color: var(--frost2);
+  text-decoration: underline;
+}
+
+/* Lists */
+ul,
+ol {
+  color: var(--slidev-text);
+}
+
+ul li,
+ol li {
+  color: var(--slidev-text);
+}
+
+/* Blockquotes */
+blockquote {
+  border-left: 4px solid var(--frost1);
+  padding-left: 1em;
+  margin-left: 0;
+  color: var(--slidev-text-light);
+}
+
+/* Tables */
+table {
+  border-collapse: collapse;
+  border: 1px solid var(--slidev-border);
+}
+
+thead {
+  background-color: var(--slidev-bg-alt);
+  border-bottom: 2px solid var(--slidev-border);
+}
+
+th {
+  color: var(--frost1);
+  font-weight: 600;
+  padding: 0.75em 1em;
+  border: 1px solid var(--slidev-border);
+}
+
+td {
+  padding: 0.75em 1em;
+  border: 1px solid var(--slidev-border);
+  border-right: 1px solid var(--slidev-border);
+}
+
+tbody tr:nth-child(even) {
+  background-color: rgba(136, 192, 208, 0.1);
+}
+
+tbody tr:hover {
+  background-color: var(--slidev-bg-alt);
+}
+
+/* Slidev Components */
+.slidev-layout {
+  background-color: var(--slidev-bg);
+  color: var(--slidev-text);
+}
+
+.slidev-page {
+  background-color: var(--slidev-bg);
+}
+
+.slidev-page-number {
+  color: var(--slidev-text-lighter);
+}
+
+
+/* Button Styles */
+button,
+.slidev-button {
+  background-color: var(--slidev-primary);
+  color: var(--slidev-bg);
+  border: none;
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+button:hover,
+.slidev-button:hover {
+  background-color: var(--frost2);
+  transform: translateY(-2px);
+}
+
+/* Highlighted Text */
+mark,
+.highlight {
+  background-color: rgba(235, 203, 139, 0.3);
+  color: var(--yellow);
+  padding: 0.2em 0.4em;
+  border-radius: 2px;
+}
+
+/* Bold & Italic */
+strong,
+b {
+  color: var(--frost3);
+  font-weight: 600;
+}
+
+em,
+i {
+  color: var(--orange);
+}
+
+/* Navigation Controls */
+/*  */
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8em;
+  }
+
+  h2 {
+    font-size: 1.6em;
+  }
+
+  h3 {
+    font-size: 1.4em;
+  }
+
+  h4 {
+    font-size: 1.2em;
+  }
+}
