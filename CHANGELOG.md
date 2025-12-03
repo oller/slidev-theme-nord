@@ -1,5 +1,11 @@
 # slidev-theme-nord
 
+## 0.0.6
+
+### Patch Changes
+
+- Remove version badge from README
+
 ## 0.0.5
 
 ### Patch Changes
