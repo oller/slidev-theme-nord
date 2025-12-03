@@ -22,76 +22,46 @@
   --yellow: #ebcb8b;
   --green: #a3be8c;
   --purple: #b48ead;
-
-  /* Slidev Variables */
-  /* --slidev-code-background: var(--dark1);
---slidev-code-foreground: #1b1b1b;
---slidev-code-font-family: "Fira Code", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
---slidev-code-padding: 8px;
---slidev-code-font-size: 12px;
---slidev-code-line-height: 18px;
---slidev-code-radius: 4px;
---slidev-code-margin: 4px 0;
---slidev-theme-primary: #3ab9d5;
---slidev-transition-duration: 0.5s;
---slidev-slide-container-background: black;
---slidev-controls-foreground: white;
---slidev-code-tab-divider: #e5e5e5;
---slidev-code-tab-text-color: #67676c;
---slidev-code-tab-font-size: 12px;
---slidev-code-tab-active-text-color: #3c3c43;
-*/
 } 
 
+/* I don't like these !importants but I'm unable to find a way
+to override Slidev's default theme variables without them. */
 /* Dark Mode */
 html.dark {
-  --slidev-bg: var(--dark0);
-  --slidev-bg-alt: var(--dark1);
-  --slidev-text: var(--light2);
-  --slidev-text-light: var(--light1);
-  --slidev-text-lighter: var(--light0);
-  --slidev-primary: var(--frost1);
-  --slidev-border: var(--dark2);
-  --slidev-code-background: var(--dark1);
-  --slidev-code-foreground: var(--light2);
-  --slidev-code-tab-divider: var(--dark2);
-  --slidev-code-tab-text-color: var(--light1);
-  --slidev-code-tab-active-text-color: var(--light2);
+  --slidev-bg: var(--dark0) !important;
+  --slidev-bg-alt: var(--dark1) !important;
+  --slidev-text: var(--light2) !important;
+  --slidev-text-light: var(--light1) !important;
+  --slidev-text-lighter: var(--light0) !important;
+  --slidev-primary: var(--frost1) !important;
+  --slidev-theme-primary: var(--frost1) !important;
+  --slidev-border: var(--dark2) !important;
+  --slidev-code-background: var(--dark1) !important;
+  --slidev-code-foreground: var(--light2) !important;
+  --slidev-code-tab-divider: var(--dark2) !important;
+  --slidev-code-tab-text-color: var(--light1) !important;
+  --slidev-code-tab-active-text-color: var(--light2) !important;
 }
 
 /* Light Mode */
 html.light {
-  --slidev-bg: var(--light0);
-  --slidev-bg-alt: var(--light2);
-  --slidev-text: var(--dark2);
-  --slidev-text-light: var(--dark1);
-  --slidev-text-lighter: var(--dark0);
-  --slidev-primary: var(--frost3);
-  --slidev-border: var(--light1);
-  --slidev-code-background: var(--light2);
-  --slidev-code-foreground: var(--dark2);
-  --slidev-code-tab-divider: var(--light1);
-  --slidev-code-tab-text-color: var(--dark1);
-  --slidev-code-tab-active-text-color: var(--dark2);
+  --slidev-bg: var(--light0) !important;
+  --slidev-bg-alt: var(--light2) !important;
+  --slidev-text: var(--dark2) !important;
+  --slidev-text-light: var(--dark1) !important;
+  --slidev-text-lighter: var(--dark0) !important;
+  --slidev-primary: var(--frost3) !important;
+  --slidev-theme-primary: var(--frost3) !important;
+  --slidev-border: var(--light1) !important;
+  --slidev-code-background: var(--light2) !important;
+  --slidev-code-foreground: var(--dark2) !important;
+  --slidev-code-tab-divider: var(--light1) !important;
+  --slidev-code-tab-text-color: var(--dark1) !important;
+  --slidev-code-tab-active-text-color: var(--dark2) !important;
 }
 
-/* Body and Container */
-body,
-.slidev-container {
-  background-color: var(--slidev-bg);
-  color: var(--slidev-text);
-  font-family: 'Nunito Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-}
 
 /* Headings */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: 500;
-}
 
 h1 {
   color: var(--red);
@@ -117,14 +87,8 @@ h6 {
   color: var(--frost2);
 }
 
-/* Code Styling */
-code,
-.slidev-code,
-.shiki {
-  font-family: 'Fira Code', 'Courier New', monospace;
-}
 
-code {
+.dark code {
   color: var(--frost1);
   background-color: var(--dark1);
   padding: 0.2em 0.4em;
@@ -134,10 +98,10 @@ code {
 
 .light code {
   background-color: var(--light2);
-  color: var(--dark1);
+  color: var(--frost0);
 }
 
-pre {
+.dark pre {
   background-color: var(--dark1);
   color: var(--frost1);
   border-radius: 4px;
@@ -151,45 +115,20 @@ pre {
   border: 1px solid var(--light1);
 }
 
-pre code {
-  background-color: transparent;
-  color: inherit;
-  padding: 0;
-}
-
 /* Links */
-a {
-  color: var(--frost3);
-  text-decoration: none;
-  transition: color 0.2s ease;
+.dark a {
+  color: var(--frost2);
+
+  &:hover {
+    color: var(--frost3);
+  }
 }
 
 .light a {
-  color: var(--frost3);
-}
-
-a:hover {
   color: var(--frost2);
-  text-decoration: underline;
-}
-
-/* Lists */
-ul,
-ol {
-  color: var(--slidev-text);
-}
-
-ul li,
-ol li {
-  color: var(--slidev-text);
-}
-
-/* Blockquotes */
-blockquote {
-  border-left: 4px solid var(--frost1);
-  padding-left: 1em;
-  margin-left: 0;
-  color: var(--slidev-text-light);
+  &:hover {
+    color: var(--frost3);
+  }
 }
 
 /* Tables */
@@ -268,35 +207,15 @@ mark,
 }
 
 /* Bold & Italic */
-strong,
-b {
-  color: var(--frost3);
-  font-weight: 600;
+.dark strong,b {
+  color: var(--yellow);
+}
+
+.light strong,b {
+  color: var(--purple);
 }
 
 em,
 i {
-  color: var(--orange);
-}
-
-/* Navigation Controls */
-/*  */
-
-/* Responsive Typography */
-@media (max-width: 768px) {
-  h1 {
-    font-size: 1.8em;
-  }
-
-  h2 {
-    font-size: 1.6em;
-  }
-
-  h3 {
-    font-size: 1.4em;
-  }
-
-  h4 {
-    font-size: 1.2em;
-  }
+  color: var(--purple);
 }

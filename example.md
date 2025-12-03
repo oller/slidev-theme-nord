@@ -11,7 +11,7 @@ A sli.dev theme referencing the [Nord theme](https://www.nordtheme.com/)
 
 # What is Slidev?
 
-Slidev is a slide maker and presentation tool designed for developers. It includes the following features:
+`Slidev` is a slide maker and presentation tool designed for developers. It includes the following features:
 
 - 📝 **Text-based** - focus on your content with Markdown, then style it later
 - 🎨 **Themable** - themes can be shared and reused as npm packages
@@ -76,7 +76,13 @@ class: "text-center"
 ##### Heading 5
 ###### Heading 6
 
-lorem ipsum
+lorem ipsum dolor sit _amet_
+
+---
+layout: center
+---
+
+> I am a blockquote
 
 ---
 

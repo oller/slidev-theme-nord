@@ -6,6 +6,10 @@
     "slidev-theme",
     "slidev"
   ],
+  "author": {
+    "name": "David Ollerhead",
+    "url": "https://davidollerhead.com"
+  },
   "engines": {
     "node": ">=18.0.0"
   },
@@ -14,9 +18,9 @@
     "dev": "slidev example.md --open",
     "export": "slidev export example.md",
     "screenshot": "slidev export example.md --format png",
-    "changeset": "changeset",
-    "version": "changeset version",
-    "publish": "changeset publish"
+    "changeset": "pnpx @changesets/cli",
+    "version": "pnpx @changesets/cli version",
+    "publish": "pnpx @changesets/cli publish"
   },
   "dependencies": {
     "@slidev/types": "^52.10.1"
@@ -34,5 +38,6 @@
         "mono": "Fira Code"
       }
     }
-  }
+  },
+  "license": "MIT"
 }

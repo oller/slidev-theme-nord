@@ -2,16 +2,16 @@
 
 [![NPM version](https://img.shields.io/npm/v/slidev-theme-nord?color=3AB9D4&label=)](https://www.npmjs.com/package/slidev-theme-nord)
 
-A (...) theme for [Slidev](https://github.com/slidevjs/slidev).
+A [Nord](https://www.nordtheme.com/) inspired theme for [Slidev](https://github.com/slidevjs/slidev).
 
-<!--
-  Learn more about how to write a theme:
-  https://sli.dev/guide/write-theme.html
---->
+![Slide 1](example-export/1.png)
+![Slide 2](example-export/2.png)
+![Slide 3](example-export/3.png)
+![Slide 4](example-export/4.png)
+![Slide 5](example-export/5.png)
+![Slide 6](example-export/6.png)
+![Slide 7](example-export/7.png)
 
-<!--
-  run `npm run dev` to check out the slides for more details of how to start writing a theme
--->
 
 <!--
   Put some screenshots here to demonstrate your theme
@@ -31,20 +31,17 @@ Learn more about [how to use a theme](https://sli.dev/guide/theme-addon#use-them
 
 ## Layouts
 
-This theme provides the following layouts:
-
-> TODO:
+This theme uses the base layouts.
 
 ## Components
 
 This theme provides the following components:
-
-> TODO:
+- NordBadge : A button-esque badge component using the Nord pallet.
 
 ## Contributing
 
-- `npm install`
-- `npm run dev` to start theme preview of `example.md`
+- `pnpm install`
+- `pnpm run dev` to start theme preview of `example.md`
 - Edit the `example.md` and style to see the changes
-- `npm run export` to generate the preview PDF
-- `npm run screenshot` to generate the preview PNG
+- `pnpm run export` to generate the preview PDF
+- `pnpm run screenshot` to generate the preview PNG
