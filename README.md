@@ -1,7 +1,5 @@
 # slidev-theme-nord
 
-[![NPM version](https://img.shields.io/npm/v/slidev-theme-nord?color=3AB9D4&label=)](https://www.npmjs.com/package/slidev-theme-nord)
-
 A [Nord](https://www.nordtheme.com/) inspired theme for [Slidev](https://github.com/slidevjs/slidev).
 
 ## Install
