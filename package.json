@@ -1,6 +1,6 @@
 {
   "name": "slidev-theme-nord",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "type": "module",
   "keywords": [
     "slidev-theme",
@@ -22,9 +22,9 @@
     "dev": "slidev example.md --open",
     "export": "slidev export example.md",
     "screenshot": "slidev export example.md --format png --dark",
-    "changeset": "pnpx @changesets/cli",
-    "version": "pnpx @changesets/cli version",
-    "publish": "pnpx @changesets/cli publish"
+    "changeset:add": "pnpx @changesets/cli",
+    "changeset:version": "pnpx @changesets/cli version",
+    "changeset:publish": "pnpx @changesets/cli publish"
   },
   "dependencies": {
     "@slidev/types": "^52.10.1"
