@@ -17,7 +17,7 @@
     "build": "slidev build example.md",
     "dev": "slidev example.md --open",
     "export": "slidev export example.md",
-    "screenshot": "slidev export example.md --format png",
+    "screenshot": "slidev export example.md --format png --dark",
     "changeset": "pnpx @changesets/cli",
     "version": "pnpx @changesets/cli version",
     "publish": "pnpx @changesets/cli publish"
