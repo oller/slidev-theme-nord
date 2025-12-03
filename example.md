@@ -5,7 +5,7 @@ class: text-center
 ---
 # Nord Theme 
 
-A sli.dev theme referencing the [Nord theme](https://www.nordtheme.com/)
+A [Nord](https://www.nordtheme.com/) inspired theme for [Slidev](https://sli.dev/)
 
 ---
 

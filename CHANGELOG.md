@@ -1,5 +1,11 @@
 # slidev-theme-nord
 
+## 0.0.5
+
+### Patch Changes
+
+- Update initial slide copy and screenshot
+
 ## 0.0.4
 
 ### Patch Changes
