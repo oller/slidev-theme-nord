@@ -10,6 +10,10 @@
     "name": "David Ollerhead",
     "url": "https://davidollerhead.com"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oller/slidev-theme-nord"
+  },
   "engines": {
     "node": ">=18.0.0"
   },

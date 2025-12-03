@@ -9,7 +9,9 @@ A [Nord](https://www.nordtheme.com/) inspired theme for [Slidev](https://github.
 Add the following frontmatter to your `slides.md`. Start Slidev then it will prompt you to install the theme automatically.
 
 ```
-theme: <b>nord</b>
+---
+theme: nord
+---
 ```
 
 Learn more about [how to use a theme](https://sli.dev/guide/theme-addon#use-theme).
