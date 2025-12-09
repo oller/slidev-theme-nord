@@ -14,7 +14,6 @@ theme: nord
 
 Learn more about [how to use a theme](https://sli.dev/guide/theme-addon#use-theme).
 
-
 ## Screenshots
 
 ![Slide 1](example-export/1.png)
@@ -25,7 +24,6 @@ Learn more about [how to use a theme](https://sli.dev/guide/theme-addon#use-them
 ![Slide 6](example-export/6.png)
 ![Slide 7](example-export/7.png)
 
-
 ## Layouts
 
 This theme uses the base layouts.
@@ -33,6 +31,7 @@ This theme uses the base layouts.
 ## Components
 
 This theme provides the following components:
+
 - NordBadge : A button-esque badge component using the Nord pallet.
 
 ![Slide 7](example-export/7.png)
