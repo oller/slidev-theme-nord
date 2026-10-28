@@ -24,42 +24,42 @@
   --purple: #b48ead;
 } 
 
-/* I don't like these !importants but I'm unable to find a way
-to override Slidev's default theme variables without them. */
+/* Overrides Slidev's default theme variables. The extra :root gives these rules
+higher specificity than Slidev's own html.dark block, so no !important is needed. */
 /* Dark Mode */
-html.dark {
-  --slidev-bg: var(--dark0) !important;
-  --slidev-slide-container-background: var(--dark0) !important;
-  --slidev-bg-alt: var(--dark1) !important;
-  --slidev-text: var(--light2) !important;
-  --slidev-text-light: var(--light1) !important;
-  --slidev-text-lighter: var(--light0) !important;
-  --slidev-primary: var(--frost1) !important;
-  --slidev-theme-primary: var(--frost1) !important;
-  --slidev-border: var(--dark2) !important;
-  --slidev-code-background: var(--dark1) !important;
-  --slidev-code-foreground: var(--light2) !important;
-  --slidev-code-tab-divider: var(--dark2) !important;
-  --slidev-code-tab-text-color: var(--light1) !important;
-  --slidev-code-tab-active-text-color: var(--light2) !important;
+html.dark:root {
+  --slidev-bg: var(--dark0);
+  --slidev-slide-container-background: var(--dark0);
+  --slidev-bg-alt: var(--dark1);
+  --slidev-text: var(--light2);
+  --slidev-text-light: var(--light1);
+  --slidev-text-lighter: var(--light0);
+  --slidev-primary: var(--frost1);
+  --slidev-theme-primary: var(--frost1);
+  --slidev-border: var(--dark2);
+  --slidev-code-background: var(--dark1);
+  --slidev-code-foreground: var(--light2);
+  --slidev-code-tab-divider: var(--dark2);
+  --slidev-code-tab-text-color: var(--light1);
+  --slidev-code-tab-active-text-color: var(--light2);
 }
 
 /* Light Mode */
-html.light {
-  --slidev-bg: var(--light0) !important;
-  --slidev-slide-container-background: var(--light0) !important;
-  --slidev-bg-alt: var(--light2) !important;
-  --slidev-text: var(--dark2) !important;
-  --slidev-text-light: var(--dark1) !important;
-  --slidev-text-lighter: var(--dark0) !important;
-  --slidev-primary: var(--frost3) !important;
-  --slidev-theme-primary: var(--frost3) !important;
-  --slidev-border: var(--light1) !important;
-  --slidev-code-background: var(--light2) !important;
-  --slidev-code-foreground: var(--dark2) !important;
-  --slidev-code-tab-divider: var(--light1) !important;
-  --slidev-code-tab-text-color: var(--dark1) !important;
-  --slidev-code-tab-active-text-color: var(--dark2) !important;
+html.light:root {
+  --slidev-bg: var(--light0);
+  --slidev-slide-container-background: var(--light0);
+  --slidev-bg-alt: var(--light2);
+  --slidev-text: var(--dark2);
+  --slidev-text-light: var(--dark1);
+  --slidev-text-lighter: var(--dark0);
+  --slidev-primary: var(--frost3);
+  --slidev-theme-primary: var(--frost3);
+  --slidev-border: var(--light1);
+  --slidev-code-background: var(--light2);
+  --slidev-code-foreground: var(--dark2);
+  --slidev-code-tab-divider: var(--light1);
+  --slidev-code-tab-text-color: var(--dark1);
+  --slidev-code-tab-active-text-color: var(--dark2);
 }
 
 
