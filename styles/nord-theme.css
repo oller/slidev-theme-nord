@@ -63,34 +63,36 @@ html.light {
 }
 
 
-/* Headings */
+/* All element styles are scoped to .slidev-layout (slide content) so they
+don't leak into Slidev's own UI (nav controls, overview, presenter view). */
 
-h1 {
+/* Headings */
+.slidev-layout h1 {
   color: var(--red);
 }
 
-h2 {
+.slidev-layout h2 {
   color: var(--orange);
 }
 
-h3 {
+.slidev-layout h3 {
   color: var(--yellow);
 }
 
-h4 {
+.slidev-layout h4 {
   color: var(--green);
 }
 
-h5 {
+.slidev-layout h5 {
   color: var(--frost0);
 }
 
-h6 {
+.slidev-layout h6 {
   color: var(--frost2);
 }
 
-
-.dark code {
+/* Code */
+.dark .slidev-layout code {
   color: var(--frost1);
   background-color: var(--dark1);
   padding: 0.2em 0.4em;
@@ -98,12 +100,13 @@ h6 {
   font-size: 0.9em;
 }
 
-.light code {
+/* frost3 (not frost0) for readable contrast on the light background */
+.light .slidev-layout code {
   background-color: var(--light2);
-  color: var(--frost0);
+  color: var(--frost3);
 }
 
-.dark pre {
+.dark .slidev-layout pre {
   background-color: var(--dark1);
   color: var(--frost1);
   border-radius: 4px;
@@ -111,57 +114,49 @@ h6 {
   overflow-y: auto;
 }
 
-.light pre {
+.light .slidev-layout pre {
   background-color: var(--light2);
   color: var(--dark2);
   border: 1px solid var(--light1);
 }
 
 /* Links */
-.dark a {
+.slidev-layout a {
   color: var(--frost2);
 
-  &:hover {
-    color: var(--frost3);
-  }
-}
-
-.light a {
-  color: var(--frost2);
   &:hover {
     color: var(--frost3);
   }
 }
 
 /* Tables */
-table {
+.slidev-layout table {
   border-collapse: collapse;
   border: 1px solid var(--slidev-border);
 }
 
-thead {
+.slidev-layout thead {
   background-color: var(--slidev-bg-alt);
   border-bottom: 2px solid var(--slidev-border);
 }
 
-th {
+.slidev-layout th {
   color: var(--frost1);
   font-weight: 600;
   padding: 0.75em 1em;
   border: 1px solid var(--slidev-border);
 }
 
-td {
+.slidev-layout td {
   padding: 0.75em 1em;
   border: 1px solid var(--slidev-border);
-  border-right: 1px solid var(--slidev-border);
 }
 
-tbody tr:nth-child(even) {
+.slidev-layout tbody tr:nth-child(even) {
   background-color: rgba(136, 192, 208, 0.1);
 }
 
-tbody tr:hover {
+.slidev-layout tbody tr:hover {
   background-color: var(--slidev-bg-alt);
 }
 
@@ -182,10 +177,9 @@ html .slidev-slide-container .slidev-slide-content.slidev-slide-content {
   color: var(--slidev-text-lighter);
 }
 
-
 /* Button Styles */
-button,
-.slidev-button {
+.slidev-layout button,
+.slidev-layout .slidev-button {
   background-color: var(--slidev-primary);
   color: var(--slidev-bg);
   border: none;
@@ -196,15 +190,15 @@ button,
   transition: all 0.2s ease;
 }
 
-button:hover,
-.slidev-button:hover {
+.slidev-layout button:hover,
+.slidev-layout .slidev-button:hover {
   background-color: var(--frost2);
   transform: translateY(-2px);
 }
 
 /* Highlighted Text */
-mark,
-.highlight {
+.slidev-layout mark,
+.slidev-layout .highlight {
   background-color: rgba(235, 203, 139, 0.3);
   color: var(--yellow);
   padding: 0.2em 0.4em;
@@ -212,15 +206,17 @@ mark,
 }
 
 /* Bold & Italic */
-.dark strong,b {
+.dark .slidev-layout strong,
+.dark .slidev-layout b {
   color: var(--yellow);
 }
 
-.light strong,b {
+.light .slidev-layout strong,
+.light .slidev-layout b {
   color: var(--purple);
 }
 
-em,
-i {
+.slidev-layout em,
+.slidev-layout i {
   color: var(--purple);
 }
