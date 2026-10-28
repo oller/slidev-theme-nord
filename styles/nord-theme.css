@@ -163,9 +163,11 @@ don't leak into Slidev's own UI (nav controls, overview, presenter view). */
 /* Slidev Components */
 /* Slidev paints the slide on .slidev-slide-content (bg-main). Put the Nord
 background there, not on layout/page, so global-top/bottom aren't hidden.
-Extra specificity is needed to beat Slidev's scoped style. */
+Extra specificity is needed to beat Slidev's scoped style. The print container
+is what export/PDF/PNG use. */
 html .slidev-slide-container,
-html .slidev-slide-container .slidev-slide-content.slidev-slide-content {
+html .slidev-slide-container .slidev-slide-content.slidev-slide-content,
+html:root .print-slide-container.print-slide-container {
   background-color: var(--slidev-bg);
 }
 
