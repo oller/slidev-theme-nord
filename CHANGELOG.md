@@ -1,5 +1,11 @@
 # slidev-theme-nord
 
+## 0.0.7
+
+### Patch Changes
+
+- 6f1c30a: Fix theme hiding global-top/global-bottom components by moving the slide background to the slide content element, and theme the letterbox colour.
+
 ## 0.0.6
 
 ### Patch Changes
