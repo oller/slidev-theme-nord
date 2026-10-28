@@ -43,3 +43,14 @@ This theme provides the following components:
 - Edit the `example.md` and style to see the changes
 - `pnpm run export` to generate the preview PDF
 - `pnpm run screenshot` to generate the preview PNG
+
+## Releasing
+
+Releases are managed with [Changesets](https://github.com/changesets/changesets).
+
+1. In your PR, run `pnpm changeset:add` and commit the generated file in `.changeset/` (choose patch/minor/major).
+2. After merging to `main`, run `pnpm changeset:version` to bump `package.json` and update `CHANGELOG.md`.
+3. Commit and push (`chore: Release`).
+4. Run `pnpm changeset:publish` (requires `npm login` with publish rights) to publish to npm and create the git tag.
+5. Run `git push --follow-tags`.
+
