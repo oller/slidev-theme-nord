@@ -29,6 +29,7 @@ to override Slidev's default theme variables without them. */
 /* Dark Mode */
 html.dark {
   --slidev-bg: var(--dark0) !important;
+  --slidev-slide-container-background: var(--dark0) !important;
   --slidev-bg-alt: var(--dark1) !important;
   --slidev-text: var(--light2) !important;
   --slidev-text-light: var(--light1) !important;
@@ -46,6 +47,7 @@ html.dark {
 /* Light Mode */
 html.light {
   --slidev-bg: var(--light0) !important;
+  --slidev-slide-container-background: var(--light0) !important;
   --slidev-bg-alt: var(--light2) !important;
   --slidev-text: var(--dark2) !important;
   --slidev-text-light: var(--dark1) !important;
@@ -164,13 +166,16 @@ tbody tr:hover {
 }
 
 /* Slidev Components */
-.slidev-layout {
+/* Slidev paints the slide on .slidev-slide-content (bg-main). Put the Nord
+background there, not on layout/page, so global-top/bottom aren't hidden.
+Extra specificity is needed to beat Slidev's scoped style. */
+html .slidev-slide-container,
+html .slidev-slide-container .slidev-slide-content.slidev-slide-content {
   background-color: var(--slidev-bg);
-  color: var(--slidev-text);
 }
 
-.slidev-page {
-  background-color: var(--slidev-bg);
+.slidev-layout {
+  color: var(--slidev-text);
 }
 
 .slidev-page-number {
