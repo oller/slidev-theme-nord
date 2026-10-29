@@ -22,11 +22,18 @@ Learn more about [how to use a theme](https://sli.dev/guide/theme-addon#use-them
 ![Slide 4](example-export/4.png)
 ![Slide 5](example-export/5.png)
 ![Slide 6](example-export/6.png)
-![Slide 7](example-export/7.png)
 
 ## Layouts
 
-This theme uses the base layouts.
+This theme uses Slidev's built-in layouts and styles them with the Nord palette (the same approach as `seriph` and `apple-basic`):
+
+- `cover` / `intro` : centred title slide
+- `section` : large title with a frost-blue accent bar
+- `fact` : one big number or phrase with a caption
+- `statement` : one bold sentence
+- `quote` : italic quote with an accent bar and attribution
+
+Other built-in layouts (`two-cols`, `image-right`, `center`, ...) work as normal. See `example.md` for usage.
 
 ## Components
 
@@ -34,7 +41,8 @@ This theme provides the following components:
 
 - NordBadge : A button-esque badge component using the Nord pallet.
 
-![Slide 7](example-export/7.png)
+![Slide 6](example-export/6.png)
+
 
 ## Contributing
 

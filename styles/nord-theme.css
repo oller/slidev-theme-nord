@@ -79,6 +79,11 @@ don't leak into Slidev's own UI (nav controls, overview, presenter view). */
   color: var(--yellow);
 }
 
+/* Yellow is ~1.2:1 on the light background; frost3 is the most readable accent */
+.light .slidev-layout h3 {
+  color: var(--frost3);
+}
+
 .slidev-layout h4 {
   color: var(--green);
 }
