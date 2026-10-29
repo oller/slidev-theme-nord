@@ -1,5 +1,11 @@
 # slidev-theme-nord
 
+## 0.1.0
+
+### Minor Changes
+
+- 60db89f: Add Nord styling for the cover, intro, section, fact, statement and quote layouts, use a more readable heading 3 colour in light mode, and add example slides (including an Unsplash image) to the example deck.
+
 ## 0.0.8
 
 ### Patch Changes
