@@ -1,0 +1,99 @@
+/* Nord styling for Slidev's built-in layouts.
+Like other established themes (e.g. seriph), we don't re-implement the layout
+components; Slidev provides the markup and we style the layout classes. */
+
+.slidev-layout.cover,
+.slidev-layout.intro,
+.slidev-layout.section,
+.slidev-layout.fact,
+.slidev-layout.statement,
+.slidev-layout.quote {
+  display: grid;
+  height: 100%;
+}
+
+.slidev-layout.cover,
+.slidev-layout.intro {
+  align-content: center;
+  text-align: center;
+}
+
+.slidev-layout.cover h1,
+.slidev-layout.intro h1 {
+  color: var(--slidev-primary);
+  font-size: 3.75rem;
+  line-height: 1.15;
+}
+
+.slidev-layout.cover h1 + p,
+.slidev-layout.intro h1 + p {
+  color: var(--slidev-text-light);
+  font-size: 1.5rem;
+}
+
+/* Section: left accent bar */
+.slidev-layout.section {
+  align-content: center;
+}
+
+.slidev-layout.section h1 {
+  font-size: 3.75rem;
+  font-weight: 500;
+  line-height: 1.15;
+  margin-bottom: 0;
+  padding-left: 0.4em;
+  border-left: 0.12em solid var(--frost1);
+}
+
+.slidev-layout.section h1 + p {
+  padding-left: 1.2rem;
+  color: var(--slidev-text-light);
+}
+
+/* Fact: one big number or phrase */
+.slidev-layout.fact {
+  text-align: center;
+}
+
+.slidev-layout.fact h1 {
+  color: var(--slidev-primary);
+  font-size: 6rem;
+  font-weight: 700;
+}
+
+.slidev-layout.fact h1 {
+  margin-bottom: 2rem;
+}
+
+.slidev-layout.fact h1 + p {
+  margin-top: 2rem;
+  color: var(--slidev-text-light);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* Statement: one bold sentence */
+.slidev-layout.statement {
+  text-align: center;
+}
+
+.slidev-layout.statement h1 {
+  font-size: 3.75rem;
+  font-weight: 700;
+}
+
+/* Quote: accent bar and quiet attribution */
+.slidev-layout.quote > div {
+  padding-left: 1.5rem;
+  border-left: 0.2em solid var(--frost2);
+}
+
+.slidev-layout.quote h1 {
+  font-style: italic;
+  font-weight: 500;
+}
+
+.slidev-layout.quote h1 + p {
+  margin-top: 0.5rem;
+  color: var(--slidev-text-lighter);
+}

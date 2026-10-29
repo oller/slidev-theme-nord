@@ -79,12 +79,6 @@ class: "text-center"
 lorem ipsum dolor sit _amet_
 
 ---
-layout: center
----
-
-> I am a blockquote
-
----
 
 # Components 
 <br>
@@ -108,3 +102,61 @@ layout: center
 
 
 
+
+---
+layout: section
+---
+
+# Section
+
+A new chapter begins
+
+---
+layout: fact
+---
+
+# 60%
+
+of the time, it works every time
+
+---
+layout: statement
+---
+
+# One bold statement
+
+---
+layout: quote
+---
+
+# "Polar night, snow storm, frost and aurora."
+
+Arctic Ice Studio
+
+---
+layout: two-cols
+---
+
+# Left
+
+- Frost
+- Snow
+
+::right::
+
+# Right
+
+- Aurora
+- Polar night
+
+---
+layout: image-right
+image: https://images.unsplash.com/photo-1488415032361-b7e238421f1b?auto=format&fit=crop&w=1920&q=80
+---
+
+# Images
+
+Slidev's `image-right` and `image-left` layouts work out of the box.
+
+- Aurora over snow-covered mountains is a natural fit for Nord's arctic palette
+- Photo from Unsplash
