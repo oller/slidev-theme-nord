@@ -60,11 +60,33 @@ This theme provides the following components:
 
 ## Releasing
 
-Releases are managed with [Changesets](https://github.com/changesets/changesets).
+Releases are managed with [Changesets](https://github.com/changesets/changesets) and published to npm via GitHub Actions trusted publishing (no local `npm login` needed).
 
-1. In a PR, run `pnpm changeset:add` and commit the `.changeset/` file (patch/minor/major).
-2. After merge to main, run `pnpm changeset:version` to bump `package.json` and `CHANGELOG.md`.
-3. Commit and push (`chore: Release`).
-4. Publish happens via GitHub Actions trusted publishing: either re-run the **Publish** workflow (workflow_dispatch), or push a commit that changes `package.json` (the workflow runs on those pushes). No `npm login` or local token needed.
-5. Optionally tag `vX.Y.Z` to match prior releases (v0.1.1 style) if the workflow does not create tags.
+The workflow file is [`.github/workflows/publish.yml`](.github/workflows/publish.yml), and npm trusted publisher must be configured for it (already set up for this repo).
+
+1. **Add a changeset in your PR**:
+   Run `pnpm changeset:add`, choose the bump type (`patch`, `minor`, or `major`), provide a summary, and commit the generated file in `.changeset/`.
+2. **Merge the PR** into `main`.
+3. **Bump the version**:
+   On the updated `main` branch, run:
+   ```bash
+   pnpm changeset:version
+   ```
+   This updates `package.json` and `CHANGELOG.md` and deletes the processed changeset.
+4. **Commit and push the Release commit**:
+   ```bash
+   git add .
+   git commit -m "chore: Release"
+   git push origin main
+   ```
+5. **Publish via GitHub Actions**:
+   Pushing the Release commit changes `package.json` on `main`, which usually triggers the **Publish** workflow automatically to publish the package to npm.
+   - If the workflow did not run automatically, manually trigger it in GitHub Actions (**Publish** workflow > **Run workflow** / `workflow_dispatch`) as a fallback.
+6. **(Optional) Tag the release**:
+   Create and push a git tag matching prior releases (e.g. `v0.1.1` style):
+   ```bash
+   git tag vX.Y.Z
+   git push origin vX.Y.Z
+   ```
+
 
