@@ -60,11 +60,13 @@ This theme provides the following components:
 
 ## Releasing
 
-Releases are managed with [Changesets](https://github.com/changesets/changesets).
+Releases use [Changesets](https://github.com/changesets/changesets) and GitHub Actions trusted publishing (no local `npm login`).
 
-1. In a PR, run `pnpm changeset:add` and commit the `.changeset/` file (patch/minor/major).
-2. After merge to main, run `pnpm changeset:version` to bump `package.json` and `CHANGELOG.md`.
-3. Commit and push (`chore: Release`).
-4. Publish happens via GitHub Actions trusted publishing: either re-run the **Publish** workflow (workflow_dispatch), or push a commit that changes `package.json` (the workflow runs on those pushes). No `npm login` or local token needed.
-5. Optionally tag `vX.Y.Z` to match prior releases (v0.1.1 style) if the workflow does not create tags.
+Workflow: [`.github/workflows/publish.yml`](.github/workflows/publish.yml). On npm, the Trusted Publisher for this package must allow that workflow filename (`publish.yml`).
 
+1. **In your feature PR**, run `pnpm changeset:add`, choose `patch` / `minor` / `major`, write a short summary, and commit the new file under `.changeset/`.
+2. **Merge the feature PR** into `main`.
+3. The **Publish** workflow opens a **Version Packages** PR (bumps `package.json` + `CHANGELOG.md`).
+4. **Merge the Version Packages PR**. The same workflow then publishes to npm via OIDC and creates the release tag when publish succeeds.
+
+If publish does not run after merging Version Packages, check the Publish workflow run on `main` and that npm Trusted Publisher still points at `publish.yml`.
