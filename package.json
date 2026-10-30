@@ -17,6 +17,13 @@
   "engines": {
     "node": ">=18.0.0"
   },
+  "files": [
+    "components",
+    "setup",
+    "styles",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "build": "slidev build example.md",
     "dev": "slidev example.md --open",

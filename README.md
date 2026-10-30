@@ -16,11 +16,11 @@ Learn more about [how to use a theme](https://sli.dev/guide/theme-addon#use-them
 
 ## Screenshots
 
-![Slide 1](example-export/1.png)
-![Slide 2](example-export/2.png)
-![Slide 3](example-export/3.png)
-![Slide 4](example-export/4.png)
-![Slide 5](example-export/5.png)
+![Slide 1](https://raw.githubusercontent.com/oller/slidev-theme-nord/main/example-export/1.png)
+![Slide 2](https://raw.githubusercontent.com/oller/slidev-theme-nord/main/example-export/2.png)
+![Slide 3](https://raw.githubusercontent.com/oller/slidev-theme-nord/main/example-export/3.png)
+![Slide 4](https://raw.githubusercontent.com/oller/slidev-theme-nord/main/example-export/4.png)
+![Slide 5](https://raw.githubusercontent.com/oller/slidev-theme-nord/main/example-export/5.png)
 
 ## Layouts
 
@@ -34,12 +34,12 @@ This theme uses Slidev's built-in layouts and styles them with the Nord palette 
 
 Other built-in layouts (`two-cols`, `image-right`, `center`, ...) work as normal. See `example.md` for usage.
 
-![Section](example-export/7.png)
-![Fact](example-export/8.png)
-![Statement](example-export/9.png)
-![Quote](example-export/10.png)
-![Two columns](example-export/11.png)
-![Image right](example-export/12.png)
+![Section](https://raw.githubusercontent.com/oller/slidev-theme-nord/main/example-export/7.png)
+![Fact](https://raw.githubusercontent.com/oller/slidev-theme-nord/main/example-export/8.png)
+![Statement](https://raw.githubusercontent.com/oller/slidev-theme-nord/main/example-export/9.png)
+![Quote](https://raw.githubusercontent.com/oller/slidev-theme-nord/main/example-export/10.png)
+![Two columns](https://raw.githubusercontent.com/oller/slidev-theme-nord/main/example-export/11.png)
+![Image right](https://raw.githubusercontent.com/oller/slidev-theme-nord/main/example-export/12.png)
 
 ## Components
 
@@ -47,7 +47,7 @@ This theme provides the following components:
 
 - NordBadge : A button-esque badge component using the Nord pallet.
 
-![NordBadge](example-export/6.png)
+![NordBadge](https://raw.githubusercontent.com/oller/slidev-theme-nord/main/example-export/6.png)
 
 
 ## Contributing
