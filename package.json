@@ -37,6 +37,7 @@
     "@slidev/types": "^52.10.1"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.31.1",
     "@slidev/cli": "^52.10.1",
     "playwright-chromium": "^1.57.0"
   },

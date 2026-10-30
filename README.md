@@ -60,33 +60,13 @@ This theme provides the following components:
 
 ## Releasing
 
-Releases are managed with [Changesets](https://github.com/changesets/changesets) and published to npm via GitHub Actions trusted publishing (no local `npm login` needed).
+Releases use [Changesets](https://github.com/changesets/changesets) and GitHub Actions trusted publishing (no local `npm login`).
 
-The workflow file is [`.github/workflows/publish.yml`](.github/workflows/publish.yml), and npm trusted publisher must be configured for it (already set up for this repo).
+Workflow: [`.github/workflows/release.yml`](.github/workflows/release.yml). On npm, the Trusted Publisher for this package must allow that workflow filename (`release.yml`).
 
-1. **Add a changeset in your PR**:
-   Run `pnpm changeset:add`, choose the bump type (`patch`, `minor`, or `major`), provide a summary, and commit the generated file in `.changeset/`.
-2. **Merge the PR** into `main`.
-3. **Bump the version**:
-   On the updated `main` branch, run:
-   ```bash
-   pnpm changeset:version
-   ```
-   This updates `package.json` and `CHANGELOG.md` and deletes the processed changeset.
-4. **Commit and push the Release commit**:
-   ```bash
-   git add .
-   git commit -m "chore: Release"
-   git push origin main
-   ```
-5. **Publish via GitHub Actions**:
-   Pushing the Release commit changes `package.json` on `main`, which usually triggers the **Publish** workflow automatically to publish the package to npm.
-   - If the workflow did not run automatically, manually trigger it in GitHub Actions (**Publish** workflow > **Run workflow** / `workflow_dispatch`) as a fallback.
-6. **(Optional) Tag the release**:
-   Create and push a git tag matching prior releases (e.g. `v0.1.1` style):
-   ```bash
-   git tag vX.Y.Z
-   git push origin vX.Y.Z
-   ```
+1. **In your feature PR**, run `pnpm changeset:add`, choose `patch` / `minor` / `major`, write a short summary, and commit the new file under `.changeset/`.
+2. **Merge the feature PR** into `main`.
+3. The **Release** workflow opens a **Version Packages** PR (bumps `package.json` + `CHANGELOG.md`).
+4. **Merge the Version Packages PR**. The same workflow then publishes to npm via OIDC and creates the release tag when publish succeeds.
 
-
+If publish does not run after merging Version Packages, check the Release workflow run on `main` and that npm Trusted Publisher still points at `release.yml`.
