@@ -1,5 +1,11 @@
 # slidev-theme-nord
 
+## 0.1.1
+
+### Patch Changes
+
+- f4bd996: Hotlink README screenshots from GitHub raw URLs and whitelist only theme files in the npm package so the published tarball stays small.
+
 ## 0.1.0
 
 ### Minor Changes
@@ -12,7 +18,7 @@
 
 - c4a5191: Scope element styles to `.slidev-layout` so they no longer leak into Slidev's own UI, and improve inline code contrast in light mode.
   Remove the `!important` flags from the Nord variable overrides by raising selector specificity (`html.dark:root` / `html.light:root`).
-  
+
   Fix the Nord background not applying to exports (PDF/PNG), which use Slidev's print container.
 
 ## 0.0.7
