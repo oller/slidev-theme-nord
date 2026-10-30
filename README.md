@@ -62,9 +62,9 @@ This theme provides the following components:
 
 Releases are managed with [Changesets](https://github.com/changesets/changesets).
 
-1. In your PR, run `pnpm changeset:add` and commit the generated file in `.changeset/` (choose patch/minor/major).
-2. After merging to `main`, run `pnpm changeset:version` to bump `package.json` and update `CHANGELOG.md`.
+1. In a PR, run `pnpm changeset:add` and commit the `.changeset/` file (patch/minor/major).
+2. After merge to main, run `pnpm changeset:version` to bump `package.json` and `CHANGELOG.md`.
 3. Commit and push (`chore: Release`).
-4. Run `pnpm changeset:publish` (requires `npm login` with publish rights) to publish to npm and create the git tag.
-5. Run `git push --follow-tags`.
+4. Publish happens via GitHub Actions trusted publishing: either re-run the **Publish** workflow (workflow_dispatch), or push a commit that changes `package.json` (the workflow runs on those pushes). No `npm login` or local token needed.
+5. Optionally tag `vX.Y.Z` to match prior releases (v0.1.1 style) if the workflow does not create tags.
 
