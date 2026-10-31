@@ -1,6 +1,6 @@
 # slidev-theme-nord
 
-A [Nord](https://www.nordtheme.com/) inspired theme for [Slidev](https://github.com/slidevjs/slidev).
+A [Nord](https://www.nordtheme.com/) inspired theme for [Slidev](https://github.com/slidevjs/slidev). Supports both Nord dark and light color schemes.
 
 ## Install
 
