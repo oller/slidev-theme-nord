@@ -29,7 +29,9 @@
     "build": "slidev build example.md",
     "dev": "slidev example.md --open",
     "export": "slidev export example.md",
-    "screenshot": "slidev export example.md --format png --dark",
+    "screenshot": "pnpm run screenshot:dark && pnpm run screenshot:light",
+    "screenshot:dark": "node scripts/screenshot.js dark",
+    "screenshot:light": "node scripts/screenshot.js light",
     "changeset:add": "pnpx @changesets/cli",
     "changeset:version": "pnpx @changesets/cli version",
     "changeset:publish": "pnpx @changesets/cli publish"
