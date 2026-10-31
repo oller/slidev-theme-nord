@@ -1,5 +1,11 @@
 # slidev-theme-nord
 
+## 0.1.2
+
+### Patch Changes
+
+- bc2fabc: Add light-mode preview screenshots interlaced alongside dark previews in README and note support for both Nord dark and light color schemes.
+
 ## 0.1.1
 
 ### Patch Changes
