@@ -25,7 +25,6 @@ jobs:
         with:
           node-version: 24
           cache: pnpm
-          registry-url: https://registry.npmjs.org
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -34,7 +33,7 @@ jobs:
         id: changesets
         uses: changesets/action@v1
         with:
-          publish: pnpm changeset publish --no-git-checks
+          publish: pnpm changeset publish
           commit: "chore: Release"
           title: "Version Packages"
         env:
