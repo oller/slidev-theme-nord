@@ -1,6 +1,6 @@
 # slidev-theme-nord
 
-A [Nord](https://www.nordtheme.com/) inspired theme for [Slidev](https://github.com/slidevjs/slidev).
+A [Nord](https://www.nordtheme.com/) inspired theme for [Slidev](https://github.com/slidevjs/slidev). Supports both Nord dark and light color schemes.
 
 ## Install
 
@@ -16,11 +16,16 @@ Learn more about [how to use a theme](https://sli.dev/guide/theme-addon#use-them
 
 ## Screenshots
 
-![Slide 1](https://raw.githubusercontent.com/oller/slidev-theme-nord/main/example-export/1.png)
-![Slide 2](https://raw.githubusercontent.com/oller/slidev-theme-nord/main/example-export/2.png)
-![Slide 3](https://raw.githubusercontent.com/oller/slidev-theme-nord/main/example-export/3.png)
-![Slide 4](https://raw.githubusercontent.com/oller/slidev-theme-nord/main/example-export/4.png)
-![Slide 5](https://raw.githubusercontent.com/oller/slidev-theme-nord/main/example-export/5.png)
+![Slide 1 (dark)](https://raw.githubusercontent.com/oller/slidev-theme-nord/main/example-export/1.png)
+![Slide 1 (light)](https://raw.githubusercontent.com/oller/slidev-theme-nord/main/example-export/1-light.png)
+![Slide 2 (dark)](https://raw.githubusercontent.com/oller/slidev-theme-nord/main/example-export/2.png)
+![Slide 2 (light)](https://raw.githubusercontent.com/oller/slidev-theme-nord/main/example-export/2-light.png)
+![Slide 3 (dark)](https://raw.githubusercontent.com/oller/slidev-theme-nord/main/example-export/3.png)
+![Slide 3 (light)](https://raw.githubusercontent.com/oller/slidev-theme-nord/main/example-export/3-light.png)
+![Slide 4 (dark)](https://raw.githubusercontent.com/oller/slidev-theme-nord/main/example-export/4.png)
+![Slide 4 (light)](https://raw.githubusercontent.com/oller/slidev-theme-nord/main/example-export/4-light.png)
+![Slide 5 (dark)](https://raw.githubusercontent.com/oller/slidev-theme-nord/main/example-export/5.png)
+![Slide 5 (light)](https://raw.githubusercontent.com/oller/slidev-theme-nord/main/example-export/5-light.png)
 
 ## Layouts
 
@@ -34,12 +39,18 @@ This theme uses Slidev's built-in layouts and styles them with the Nord palette 
 
 Other built-in layouts (`two-cols`, `image-right`, `center`, ...) work as normal. See `example.md` for usage.
 
-![Section](https://raw.githubusercontent.com/oller/slidev-theme-nord/main/example-export/7.png)
-![Fact](https://raw.githubusercontent.com/oller/slidev-theme-nord/main/example-export/8.png)
-![Statement](https://raw.githubusercontent.com/oller/slidev-theme-nord/main/example-export/9.png)
-![Quote](https://raw.githubusercontent.com/oller/slidev-theme-nord/main/example-export/10.png)
-![Two columns](https://raw.githubusercontent.com/oller/slidev-theme-nord/main/example-export/11.png)
-![Image right](https://raw.githubusercontent.com/oller/slidev-theme-nord/main/example-export/12.png)
+![Section (dark)](https://raw.githubusercontent.com/oller/slidev-theme-nord/main/example-export/7.png)
+![Section (light)](https://raw.githubusercontent.com/oller/slidev-theme-nord/main/example-export/7-light.png)
+![Fact (dark)](https://raw.githubusercontent.com/oller/slidev-theme-nord/main/example-export/8.png)
+![Fact (light)](https://raw.githubusercontent.com/oller/slidev-theme-nord/main/example-export/8-light.png)
+![Statement (dark)](https://raw.githubusercontent.com/oller/slidev-theme-nord/main/example-export/9.png)
+![Statement (light)](https://raw.githubusercontent.com/oller/slidev-theme-nord/main/example-export/9-light.png)
+![Quote (dark)](https://raw.githubusercontent.com/oller/slidev-theme-nord/main/example-export/10.png)
+![Quote (light)](https://raw.githubusercontent.com/oller/slidev-theme-nord/main/example-export/10-light.png)
+![Two columns (dark)](https://raw.githubusercontent.com/oller/slidev-theme-nord/main/example-export/11.png)
+![Two columns (light)](https://raw.githubusercontent.com/oller/slidev-theme-nord/main/example-export/11-light.png)
+![Image right (dark)](https://raw.githubusercontent.com/oller/slidev-theme-nord/main/example-export/12.png)
+![Image right (light)](https://raw.githubusercontent.com/oller/slidev-theme-nord/main/example-export/12-light.png)
 
 ## Components
 
@@ -47,7 +58,8 @@ This theme provides the following components:
 
 - NordBadge : A button-esque badge component using the Nord pallet.
 
-![NordBadge](https://raw.githubusercontent.com/oller/slidev-theme-nord/main/example-export/6.png)
+![NordBadge (dark)](https://raw.githubusercontent.com/oller/slidev-theme-nord/main/example-export/6.png)
+![NordBadge (light)](https://raw.githubusercontent.com/oller/slidev-theme-nord/main/example-export/6-light.png)
 
 
 ## Contributing
@@ -56,7 +68,7 @@ This theme provides the following components:
 - `pnpm run dev` to start theme preview of `example.md`
 - Edit the `example.md` and style to see the changes
 - `pnpm run export` to generate the preview PDF
-- `pnpm run screenshot` to generate the preview PNG
+- `pnpm run screenshot` to generate both dark and light preview PNGs (or `pnpm run screenshot:dark` / `pnpm run screenshot:light`)
 
 ## Releasing
 
