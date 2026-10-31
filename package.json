@@ -1,6 +1,7 @@
 {
   "name": "slidev-theme-nord",
   "version": "0.1.1",
+  "packageManager": "pnpm@10.34.6",
   "type": "module",
   "keywords": [
     "slidev-theme",
